@@ -1,0 +1,21 @@
+{
+  "name": "cucumber-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "cucumber-js --config cucumber.js",
+    "test:headless": "cross-env HEADLESS=true cucumber-js",
+    "playwright": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.6.0",
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^25.1.0",
+    "cross-env": "^10.1.0"
+  }
+}
