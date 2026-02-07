@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "cucumber-js --config cucumber.js",
-    "test:headless": "cross-env HEADLESS=true cucumber-js",
+    "test": "rimraf allure-results && cucumber-js --config cucumber.js",
+    "test:headless": "rimraf allure-results && cross-env HEADLESS=true cucumber-js",
     "playwright": "npx playwright test"
   },
   "keywords": [],
@@ -16,6 +16,9 @@
     "@cucumber/cucumber": "^12.6.0",
     "@playwright/test": "^1.58.0",
     "@types/node": "^25.1.0",
-    "cross-env": "^10.1.0"
+    "allure-cucumberjs": "^3.4.5",
+    "allure-playwright": "^3.4.5",
+    "cross-env": "^10.1.0",
+    "rimraf": "^6.1.2"
   }
 }

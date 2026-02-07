@@ -9,7 +9,11 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   /* Use 'dot' or 'list' for a cleaner console output while running Cucumber */
-  reporter: [["html", { open: "never" }]],
+  reporter: [
+    ["list"],
+    ["html", { open: "never" }],
+    ["allure-playwright", { outputFolder: "allure-results" }], // Optional, for non-cucumber tests
+  ],
 
   use: {
     /* These settings will only apply if you run: npx playwright test */
